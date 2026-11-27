@@ -1,0 +1,39 @@
+{
+  "role": "Volunteers",
+  "title": "Respond to an RSVP email",
+  "summary": "Know what to look for in a scheduling email and let your coordinator know if you can serve.",
+  "steps": [
+    {
+      "id": "find-the-email",
+      "title": "Find the scheduling email",
+      "paragraphs": [
+        "Look in the inbox for the email address you gave your coordinator. If you’re expecting an invitation, search for “Mercy PCA” and check your spam or junk folder."
+      ],
+      "images": []
+    },
+    {
+      "id": "read-the-invitation",
+      "title": "Read the invitation",
+      "paragraphs": [
+        "Check the service date, time, and the role you’re being asked to fill. Read any notes from the coordinator before responding. If the email lists several dates, check each one."
+      ],
+      "images": []
+    },
+    {
+      "id": "send-your-rsvp",
+      "title": "Send your RSVP",
+      "paragraphs": [
+        "Use the response button or link in the email to indicate whether you can serve. If it opens a response page, finish there and check that it shows the answer you intended."
+      ],
+      "images": []
+    },
+    {
+      "id": "get-help",
+      "title": "Contact your coordinator if plans change",
+      "paragraphs": [
+        "If you can’t open the invitation, aren’t sure your response went through, or need to change your answer, contact the coordinator for your team. Include the service date so they can find your assignment."
+      ],
+      "images": []
+    }
+  ]
+}

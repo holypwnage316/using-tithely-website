@@ -1,0 +1,39 @@
+{
+  "role": "Nursery coordinators",
+  "title": "Email all nursery volunteers",
+  "summary": "Find your nursery team, check who will receive the message, and send a group email.",
+  "steps": [
+    {
+      "id": "find-the-nursery-team",
+      "title": "Open the nursery volunteer list",
+      "paragraphs": [
+        "Sign in to Mercy PCA’s Tithely account and open the list for your nursery volunteers. If you can’t find or open the list, ask the church’s Tithely administrator to check your access."
+      ],
+      "images": []
+    },
+    {
+      "id": "choose-recipients",
+      "title": "Check the recipients",
+      "paragraphs": [
+        "Start an email to the group. Check that the recipients include everyone on the nursery team. If you started from a single service or event, check whether the list shows only the volunteers scheduled for that date."
+      ],
+      "images": []
+    },
+    {
+      "id": "write-the-email",
+      "title": "Write your message",
+      "paragraphs": [
+        "Give the email a clear subject, such as “Nursery team update for Sunday.” Include the date, what the team needs to know, and when or how volunteers should respond."
+      ],
+      "images": []
+    },
+    {
+      "id": "review-and-send",
+      "title": "Review and send",
+      "paragraphs": [
+        "Read the subject and message once more, then double-check the recipient list. Send the email when it’s ready. If your account shows sent messages, look for your email there."
+      ],
+      "images": []
+    }
+  ]
+}

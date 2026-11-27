@@ -1,0 +1,327 @@
+@font-face {
+  font-family: "DM Sans";
+  src: url("fonts/dm-sans.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Fraunces;
+  src: url("fonts/fraunces.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  --paper: #faf8f2;
+  --surface: #fffdf8;
+  --sage: #edefe5;
+  --ink: #1d2d24;
+  --muted: #4b5950;
+  --green: #24553e;
+  --deep-green: #193d2c;
+  --line: #d7dbcf;
+  --serif: Fraunces, Georgia, serif;
+  --sans: "DM Sans", system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 1rem / 1.65 var(--sans);
+}
+
+main { flex: 1; }
+
+h1, h2, h3, p, figure { margin: 0; }
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  text-wrap: pretty;
+}
+
+img { display: block; max-width: 100%; }
+
+a {
+  color: var(--green);
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.2em;
+}
+
+a:hover { color: var(--deep-green); }
+
+:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 4px;
+}
+
+[id] { scroll-margin-block-start: 1.5rem; }
+
+.wrap {
+  width: min(71rem, calc(100% - 3rem));
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 2;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.6rem 1rem;
+  transform: translateY(-200%);
+  background: var(--surface);
+}
+
+.skip-link:focus { transform: none; }
+
+.site-header { border-bottom: 1px solid var(--line); }
+
+.header-inner, .footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+}
+
+.header-inner { padding-block: 0.85rem; }
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--ink);
+  font: 600 1.35rem / 1 var(--serif);
+  letter-spacing: -0.035em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand img { flex-shrink: 0; }
+
+.nav-link {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  font-weight: 700;
+}
+
+.hero {
+  background: var(--deep-green);
+  color: var(--paper);
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+  align-items: end;
+  gap: clamp(1.5rem, 6vw, 5rem);
+  padding-block: clamp(3.2rem, 8vw, 6.7rem);
+}
+
+.hero h1 {
+  font-size: clamp(3.5rem, 8vw, 7.5rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+.hero h1 span {
+  display: block;
+  color: #c2d6b8;
+}
+
+.hero p {
+  max-width: 23rem;
+  padding-block: 0.2rem;
+  padding-left: 1.25rem;
+  border-left: 1px solid #a0b39b;
+  color: #eef1e7;
+  font-size: clamp(1.125rem, 2.5vw, 1.48rem);
+  line-height: 1.5;
+}
+
+.guides { padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+.guides h2 { font-size: clamp(2rem, 4vw, 3rem); }
+
+.guide-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.4rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guide-card {
+  display: block;
+  height: 100%;
+  padding: clamp(1.35rem, 3.5vw, 2.1rem);
+  border: 1px solid var(--line);
+  border-top: 3px solid #76907b;
+  border-radius: 0.5rem;
+  background: var(--surface);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.guide-card:hover {
+  border-color: var(--green);
+  background: #f7f8f0;
+}
+
+.guide-card:hover h3 {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.role {
+  color: var(--green);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.095em;
+  text-transform: uppercase;
+}
+
+.guide-card h3 {
+  margin-block: 0.75rem 0.55rem;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+}
+
+.guide-card p:last-child {
+  max-width: 34rem;
+  color: var(--muted);
+}
+
+.site-footer {
+  padding-block: 1.25rem;
+  border-top: 1px solid var(--line);
+  background: var(--sage);
+  color: var(--muted);
+}
+
+.guide-header {
+  padding-block: clamp(2.5rem, 6vw, 4.65rem);
+  border-bottom: 1px solid var(--line);
+  background: var(--sage);
+}
+
+.guide-header h1, .error-page h1 {
+  margin-block: 0.75rem 1rem;
+  font-size: clamp(2.7rem, 6vw, 5rem);
+}
+
+.lede {
+  max-width: 40rem;
+  color: var(--muted);
+  font-size: clamp(1.075rem, 1.65vw, 1.25rem);
+}
+
+.guide-layout {
+  display: grid;
+  grid-template-columns: minmax(12rem, 0.9fr) minmax(0, 2.6fr);
+  gap: clamp(2rem, 6vw, 4.7rem);
+  padding-block: clamp(2rem, 5vw, 4rem) clamp(3rem, 7vw, 5.5rem);
+}
+
+.guide-toc {
+  position: sticky;
+  top: 1.5rem;
+  align-self: start;
+  max-height: calc(100vh - 3rem);
+  overflow-y: auto;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--surface);
+}
+
+.guide-toc h2 { font: 700 1rem / 1.45 var(--sans); }
+
+.guide-toc ol {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+  color: var(--muted);
+}
+
+.guide-toc li { padding-block: 0.2rem; }
+.guide-steps { list-style: none; padding: 0; margin: 0; }
+
+.guide-step {
+  display: grid;
+  grid-template-columns: 2.2rem minmax(0, 1fr);
+  align-items: start;
+  gap: 0.8rem;
+  padding-block: 1.65rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.guide-step:first-child { padding-top: 0; }
+
+.step-number {
+  display: grid;
+  width: 2.05rem;
+  height: 2.05rem;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--sage);
+  color: var(--green);
+  font-weight: 700;
+}
+
+.guide-step h2 { font-size: clamp(1.65rem, 3.1vw, 2.15rem); }
+
+.guide-step p {
+  max-width: 65ch;
+  margin-top: 0.68rem;
+}
+
+.screenshot {
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 1.2rem;
+}
+
+.screenshot img {
+  width: auto;
+  height: auto;
+  max-height: 40rem;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+  background: var(--surface);
+}
+
+.screenshot figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.75rem;
+  margin-top: 0.4rem;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.error-page { padding-block: 4rem; }
+
+@media (max-width: 44rem) {
+  .wrap { width: calc(100% - 2rem); }
+
+  .hero-inner, .guide-cards, .guide-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero h1 { font-size: clamp(3.15rem, 11vw, 5.5rem); }
+  .guide-toc { position: static; max-height: none; }
+  .guide-step { gap: 0.5rem; }
+}
