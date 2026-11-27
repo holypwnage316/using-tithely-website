@@ -14,6 +14,10 @@ TEMPLATES = ROOT / "site" / "templates"
 GUIDES = ROOT / "content" / "guides"
 OUTPUT = ROOT / "dist"
 SLUG = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*")
+AUDIENCES = {
+    "ministry-leaders": "Ministry leaders",
+    "volunteers": "Volunteers",
+}
 
 
 def render(template, **values):
@@ -74,37 +78,58 @@ def guide_page(guide):
     )
 
 
-def guide_card(slug, guide):
+def guide_card(slug, guide, audience_title):
+    role = guide["role"]
+    role_label = ""
+    if role.casefold() != audience_title.casefold():
+        role_label = f'\n            <p class="role">{escape(role)}</p>'
     return f"""        <li>
           <a class="guide-card" href="/{slug}/">
-            <p class="role">{escape(guide["role"])}</p>
-            <h3>{escape(guide["title"])}</h3>
+            <h3>{escape(guide["title"])}</h3>{role_label}
             <p>{escape(guide["summary"])}</p>
           </a>
         </li>"""
+
+
+def guide_group(audience, title, cards):
+    card_list = "\n".join(cards)
+    return f"""      <section class="guide-group" id="{audience}" aria-labelledby="{audience}-title">
+        <h2 id="{audience}-title">{title}</h2>
+        <ul class="guide-cards" role="list">
+{card_list}
+        </ul>
+      </section>"""
 
 
 def build():
     with TemporaryDirectory(prefix=".site-build-", dir=ROOT) as temp:
         output = Path(temp) / "dist"
         shutil.copytree(ASSETS, output / "assets", ignore=shutil.ignore_patterns(".gitkeep", ".DS_Store"))
-        cards = []
+        cards = {audience: [] for audience in AUDIENCES}
         for source in sorted(GUIDES.glob("*.json")):
             slug = source.stem
             try:
                 if not SLUG.fullmatch(slug):
                     raise ValueError("Use lowercase words and hyphens in the guide filename")
                 guide = json.loads(source.read_text(encoding="utf-8"))
+                audience = guide.get("audience", "volunteers")
+                if audience not in AUDIENCES:
+                    raise ValueError("The audience must be ministry-leaders or volunteers")
                 page = layout(f'{guide["title"]} | Mercy PCA', guide["summary"], guide_page(guide))
+                cards[audience].append(guide_card(slug, guide, AUDIENCES[audience]))
             except (KeyError, TypeError, ValueError) as error:
                 raise SystemExit(f"{source.relative_to(ROOT)}: {error}") from None
             (output / slug).mkdir()
             (output / slug / "index.html").write_text(page, encoding="utf-8")
-            cards.append(guide_card(slug, guide))
 
-        home = render("home.html", cards="\n".join(cards))
+        groups = "\n".join(
+            guide_group(audience, title, cards[audience])
+            for audience, title in AUDIENCES.items()
+            if cards[audience]
+        )
+        home = render("home.html", groups=groups)
         (output / "index.html").write_text(
-            layout("Tithely guides | Mercy PCA", "Tithely walkthroughs for Mercy PCA volunteers and coordinators.", home),
+            layout("Tithely guides | Mercy PCA", "Tithely walkthroughs for Mercy PCA ministry leaders and volunteers.", home),
             encoding="utf-8",
         )
         (output / "404.html").write_text(

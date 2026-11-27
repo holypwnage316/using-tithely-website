@@ -1,4 +1,5 @@
 {
+  "audience": "volunteers",
   "role": "Volunteers",
   "title": "Respond to an RSVP email",
   "summary": "See what a schedule email looks like, send your RSVP, and check your confirmation and reminder.",

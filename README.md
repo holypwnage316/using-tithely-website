@@ -1,6 +1,6 @@
 # Mercy PCA Tithely Guides
 
-A training site for Mercy PCA volunteers and ministry coordinators. Each guide has a shareable URL, links to individual steps, and space for the church’s own screenshots.
+A training site for Mercy PCA ministry leaders and volunteers. Each guide has a shareable URL, links to individual steps, and space for the church’s own screenshots.
 
 | Guide | Shareable path |
 | --- | --- |
@@ -23,7 +23,9 @@ A training site for Mercy PCA volunteers and ministry coordinators. Each guide h
 ]
 ```
 
-To create a guide, copy one of the JSON files, give it a new lowercase hyphenated filename, and edit the role, title, summary, and steps. The filename becomes the URL, and the homepage lists the guide automatically. Step IDs become the links in the guide’s table of contents. Keep existing filenames and step IDs when editing a guide you’ve already shared.
+To create a guide, copy one of the JSON files, give it a new lowercase hyphenated filename, and edit the role, title, summary, and steps. Set the `audience` field to `ministry-leaders` or `volunteers` to place the guide on the homepage. Guides without an audience appear under Volunteers.
+
+The filename becomes the guide’s URL, and step IDs become the links in its table of contents. Keep existing filenames and step IDs when editing a guide you’ve already shared.
 
 ## Run locally
 
