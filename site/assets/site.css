@@ -16,14 +16,19 @@
 
 :root {
   color-scheme: light;
-  --paper: #faf8f2;
+  --paper: #fbf7ef;
   --surface: #fffdf8;
-  --sage: #edefe5;
-  --ink: #1d2d24;
-  --muted: #4b5950;
-  --green: #24553e;
-  --deep-green: #193d2c;
-  --line: #d7dbcf;
+  --surface-tint: #f3eae3;
+  --surface-hover: #f7eee9;
+  --ink: #302329;
+  --muted: #5d444c;
+  --accent: #7b2f45;
+  --accent-deep: #4d182b;
+  --line: #dfcec9;
+  --card-rule: #a46673;
+  --hero-heading: #eed2cd;
+  --hero-copy: #f7ebe6;
+  --hero-rule: #c79298;
   --serif: Fraunces, Georgia, serif;
   --sans: "DM Sans", system-ui, sans-serif;
 }
@@ -55,15 +60,15 @@ h1, h2, h3 {
 img { display: block; max-width: 100%; }
 
 a {
-  color: var(--green);
+  color: var(--accent);
   text-decoration-thickness: 0.08em;
   text-underline-offset: 0.2em;
 }
 
-a:hover { color: var(--deep-green); }
+a:hover { color: var(--accent-deep); }
 
 :focus-visible {
-  outline: 3px solid var(--green);
+  outline: 3px solid var(--accent);
   outline-offset: 4px;
 }
 
@@ -119,7 +124,7 @@ a:hover { color: var(--deep-green); }
 }
 
 .hero {
-  background: var(--deep-green);
+  background: var(--accent-deep);
   color: var(--paper);
 }
 
@@ -139,15 +144,15 @@ a:hover { color: var(--deep-green); }
 
 .hero h1 span {
   display: block;
-  color: #c2d6b8;
+  color: var(--hero-heading);
 }
 
 .hero p {
   max-width: 23rem;
   padding-block: 0.2rem;
   padding-left: 1.25rem;
-  border-left: 1px solid #a0b39b;
-  color: #eef1e7;
+  border-left: 1px solid var(--hero-rule);
+  color: var(--hero-copy);
   font-size: clamp(1.125rem, 2.5vw, 1.48rem);
   line-height: 1.5;
 }
@@ -169,7 +174,7 @@ a:hover { color: var(--deep-green); }
   height: 100%;
   padding: clamp(1.35rem, 3.5vw, 2.1rem);
   border: 1px solid var(--line);
-  border-top: 3px solid #76907b;
+  border-top: 3px solid var(--card-rule);
   border-radius: 0.5rem;
   background: var(--surface);
   color: var(--ink);
@@ -177,8 +182,8 @@ a:hover { color: var(--deep-green); }
 }
 
 .guide-card:hover {
-  border-color: var(--green);
-  background: #f7f8f0;
+  border-color: var(--accent);
+  background: var(--surface-hover);
 }
 
 .guide-card:hover h3 {
@@ -187,7 +192,7 @@ a:hover { color: var(--deep-green); }
 }
 
 .role {
-  color: var(--green);
+  color: var(--accent);
   font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.095em;
@@ -207,14 +212,14 @@ a:hover { color: var(--deep-green); }
 .site-footer {
   padding-block: 1.25rem;
   border-top: 1px solid var(--line);
-  background: var(--sage);
+  background: var(--surface-tint);
   color: var(--muted);
 }
 
 .guide-header {
   padding-block: clamp(2.5rem, 6vw, 4.65rem);
   border-bottom: 1px solid var(--line);
-  background: var(--sage);
+  background: var(--surface-tint);
 }
 
 .guide-header h1, .error-page h1 {
@@ -275,8 +280,8 @@ a:hover { color: var(--deep-green); }
   height: 2.05rem;
   place-items: center;
   border-radius: 50%;
-  background: var(--sage);
-  color: var(--green);
+  background: var(--surface-tint);
+  color: var(--accent);
   font-weight: 700;
 }
 
