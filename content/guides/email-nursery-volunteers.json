@@ -5,35 +5,69 @@
   "steps": [
     {
       "id": "find-the-nursery-team",
-      "title": "Open the nursery volunteer list",
+      "title": "Open Tags",
       "paragraphs": [
-        "Sign in to Mercy PCA’s Tithely account and open the list for your nursery volunteers. If you can’t find or open the list, ask the church’s Tithely administrator to check your access."
+        "Sign in to Mercy PCA’s Tithely account and click “Tags” at the top. Mercy PCA organizes groups by tag, and each tag lists the people in that group."
+      ],
+      "images": [
+        {
+          "file": "tithely-tags-navigation.png",
+          "alt": "Tithely’s top navigation with the Tags tab selected next to Giving.",
+          "caption": "Find Tags in the top navigation."
+        }
+      ]
+    },
+    {
+      "id": "open-nursery-volunteers",
+      "title": "Select the Nursery Volunteers tag",
+      "paragraphs": [
+        "Open the “Children’s Ministries” folder, then select the “Nursery Volunteers” tag."
       ],
       "images": []
     },
     {
       "id": "choose-recipients",
-      "title": "Check the recipients",
+      "title": "Click Email People",
       "paragraphs": [
-        "Start an email to the group. Check that the recipients include everyone on the nursery team. If you started from a single service or event, check whether the list shows only the volunteers scheduled for that date."
+        "Check that the page heading says “Nursery Volunteers,” then click “Email People” on the right to open an email to that group."
       ],
-      "images": []
+      "images": [
+        {
+          "file": "nursery-volunteers-email-people.png",
+          "alt": "Nursery Volunteers tag page with the Email People option to the right of the volunteer list.",
+          "caption": "Email People is on the right side of the Nursery Volunteers page."
+        }
+      ]
     },
     {
       "id": "write-the-email",
       "title": "Write your message",
       "paragraphs": [
-        "Give the email a clear subject, such as “Nursery team update for Sunday.” Include the date, what the team needs to know, and when or how volunteers should respond."
+        "In “Compose Message,” check the Bcc line to make sure you’re emailing the nursery volunteers. Fill in “Subject,” then type your message in the large box below.",
+        "To include a file, click “Add Attachment” and select the file you want to send."
       ],
-      "images": []
+      "images": [
+        {
+          "file": "nursery-compose-message.png",
+          "alt": "Compose Message window with the Bcc line, Subject field, message editor, and Add Attachment option.",
+          "caption": "Enter the subject and message in Compose Message."
+        }
+      ]
     },
     {
       "id": "review-and-send",
-      "title": "Review and send",
+      "title": "Send now or schedule for later",
       "paragraphs": [
-        "Read the subject and message once more, then double-check the recipient list. Send the email when it’s ready. If your account shows sent messages, look for your email there."
+        "Review the recipients, subject, message, and any attachments. Click “Send” to send the email right away.",
+        "To send it later, click the arrow next to “Send.” Choose one of the suggested times or select “Send at Custom Date/Time” to set your own."
       ],
-      "images": []
+      "images": [
+        {
+          "file": "nursery-send-options.png",
+          "alt": "Send menu showing immediate delivery, suggested times, and Send at Custom Date/Time.",
+          "caption": "The arrow next to Send opens the scheduling options."
+        }
+      ]
     }
   ]
 }
