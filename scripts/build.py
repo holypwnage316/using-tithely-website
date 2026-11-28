@@ -15,6 +15,7 @@ GUIDES = ROOT / "content" / "guides"
 OUTPUT = ROOT / "dist"
 SLUG = re.compile(r"[a-z0-9]+(?:-[a-z0-9]+)*")
 AUDIENCES = {
+    "everyone": "Everyone at Mercy",
     "ministry-leaders": "Ministry leaders",
     "volunteers": "Volunteers",
 }
@@ -114,7 +115,7 @@ def build():
                 guide = json.loads(source.read_text(encoding="utf-8"))
                 audience = guide.get("audience", "volunteers")
                 if audience not in AUDIENCES:
-                    raise ValueError("The audience must be ministry-leaders or volunteers")
+                    raise ValueError(f"The audience must be one of {', '.join(AUDIENCES)}")
                 page = layout(f'{guide["title"]} | Mercy PCA', guide["summary"], guide_page(guide))
                 cards[audience].append(guide_card(slug, guide, AUDIENCES[audience]))
             except (KeyError, TypeError, ValueError) as error:
@@ -129,7 +130,7 @@ def build():
         )
         home = render("home.html", groups=groups)
         (output / "index.html").write_text(
-            layout("Tithely guides | Mercy PCA", "Tithely walkthroughs for Mercy PCA ministry leaders and volunteers.", home),
+            layout("Tithely guides | Mercy PCA", "Walkthroughs for the Mercy Church app, ministry leaders, and volunteers.", home),
             encoding="utf-8",
         )
         (output / "404.html").write_text(

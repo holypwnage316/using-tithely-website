@@ -166,6 +166,8 @@ a:hover { color: var(--accent-deep); }
 
 .guide-group h2 { font-size: clamp(2rem, 4vw, 3rem); }
 
+#everyone { grid-column: 1 / -1; }
+
 .guide-cards {
   display: grid;
   gap: 1rem;

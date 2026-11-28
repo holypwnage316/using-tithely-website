@@ -1,0 +1,65 @@
+{
+  "audience": "everyone",
+  "role": "Everyone at Mercy",
+  "title": "Find your groups in the app",
+  "summary": "Find your groups, browse all groups, and see how to open Members or Chat in the Mercy Church app.",
+  "steps": [
+    {
+      "id": "open-the-app",
+      "title": "Open the app and tap More",
+      "paragraphs": [
+        "After installing the Mercy Church app, open it to the Home screen. Tap “More” at the bottom right."
+      ],
+      "images": [
+        {
+          "file": "mercy-app-home.png",
+          "alt": "Mercy Church app Home screen with the More tab at the bottom right.",
+          "caption": "Tap More in the bottom-right corner."
+        }
+      ]
+    },
+    {
+      "id": "open-groups",
+      "title": "Tap Groups",
+      "paragraphs": [
+        "In the More menu, tap “Groups.” It’s between “Give” and “About Us.”"
+      ],
+      "images": [
+        {
+          "file": "mercy-app-more.png",
+          "alt": "More menu showing Groups between Give and About Us.",
+          "caption": "The More menu contains Groups."
+        }
+      ]
+    },
+    {
+      "id": "browse-groups",
+      "title": "See your groups or browse all groups",
+      "paragraphs": [
+        "The Groups screen opens to “Your Groups,” which lists the groups you belong to. Tap “All Groups” to browse the church’s groups, or use “Search Groups” to look for one by name."
+      ],
+      "images": [
+        {
+          "file": "mercy-app-groups.png",
+          "alt": "Groups screen with Your Groups selected, All Groups beside it, and the Nursery Volunteers group below.",
+          "caption": "Your Groups opens by default."
+        }
+      ]
+    },
+    {
+      "id": "open-a-group",
+      "title": "Open a group to see Members or Chat",
+      "paragraphs": [
+        "Tap the group you want to open. This example uses “Nursery Volunteers.”",
+        "Tap “Members” to see who’s in the group, or tap “Chat” to read and send messages with the group."
+      ],
+      "images": [
+        {
+          "file": "mercy-app-nursery-volunteers.png",
+          "alt": "Nursery Volunteers group page with Chat, Members, and Settings buttons.",
+          "caption": "The Nursery Volunteers group page."
+        }
+      ]
+    }
+  ]
+}
