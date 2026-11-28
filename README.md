@@ -5,6 +5,7 @@ A training site for Mercy PCA members, ministry leaders, and volunteers. Each gu
 | Guide | Shareable path |
 | --- | --- |
 | Email all nursery volunteers | `/email-nursery-volunteers/` |
+| Check a volunteer’s RSVP | `/check-volunteer-rsvp/` |
 | Respond to an RSVP email | `/respond-to-rsvp/` |
 | Find your groups in the app | `/find-groups-in-the-app/` |
 

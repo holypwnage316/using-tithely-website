@@ -1,0 +1,66 @@
+{
+  "audience": "ministry-leaders",
+  "role": "Ministry leaders",
+  "title": "Check a volunteer’s RSVP",
+  "summary": "See whether a volunteer has responded to their serving assignment in Tithely.",
+  "steps": [
+    {
+      "id": "open-events",
+      "title": "Open the Events calendar",
+      "paragraphs": [
+        "Log in to Tithely and click “Events” in the top navigation. Tithely opens the calendar."
+      ],
+      "images": [
+        {
+          "file": "tithely-events-calendar.png",
+          "alt": "Tithely dashboard with Events selected in the top navigation and the November calendar open.",
+          "caption": "Click Events to open the calendar."
+        }
+      ]
+    },
+    {
+      "id": "open-the-event",
+      "title": "Find and click the event",
+      "paragraphs": [
+        "Use the arrows next to the month to navigate to the date you want to check. Click the event on that date. In this example, click the 10:30 a.m. Nursery event on January 31."
+      ],
+      "images": [
+        {
+          "file": "tithely-calendar-nursery-event.png",
+          "alt": "January 2027 calendar with the 10:30 a.m. Nursery event on January 31.",
+          "caption": "The example event is Nursery on January 31 at 10:30 a.m."
+        }
+      ]
+    },
+    {
+      "id": "open-volunteers",
+      "title": "Open Volunteers",
+      "paragraphs": [
+        "In the event window, click “Volunteers” to open the list of people scheduled to serve."
+      ],
+      "images": [
+        {
+          "file": "tithely-event-options.png",
+          "alt": "January 31 Nursery event window with the purple Volunteers button at the lower right.",
+          "caption": "Volunteers is in the lower-right corner of the event window."
+        }
+      ]
+    },
+    {
+      "id": "check-the-response",
+      "title": "Check the volunteer’s response",
+      "paragraphs": [
+        "Find the volunteer under their assigned role and look at the circle beside their name.",
+        "A filled green circle means they accepted the assignment and RSVPed.",
+        "An empty circle means there’s no RSVP recorded. They may not have responded yet, or they may be missing an email address in the directory to receive the request."
+      ],
+      "images": [
+        {
+          "file": "tithely-volunteer-rsvp-status.png",
+          "alt": "Nursery volunteer list with a filled green circle for an accepted RSVP and empty circles for assignments with no response.",
+          "caption": "Read the RSVP circle beside each volunteer’s name."
+        }
+      ]
+    }
+  ]
+}
