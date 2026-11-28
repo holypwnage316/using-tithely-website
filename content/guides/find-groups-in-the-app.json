@@ -6,29 +6,34 @@
   "steps": [
     {
       "id": "open-the-app",
-      "title": "Open the app and tap More",
+      "title": "Open the Mercy Church app",
       "paragraphs": [
-        "After installing the Mercy Church app, open it to the Home screen. Tap “More” at the bottom right."
+        "After installing the Mercy Church app, open it to the Home screen."
       ],
       "images": [
         {
           "file": "mercy-app-home.png",
-          "alt": "Mercy Church app Home screen with the More tab at the bottom right.",
-          "caption": "Tap More in the bottom-right corner."
+          "alt": "Mercy Church app Home screen with the church logo and tabs along the bottom."
         }
       ]
     },
     {
       "id": "open-groups",
-      "title": "Tap Groups",
+      "title": "Tap Groups on the Home screen",
       "paragraphs": [
-        "In the More menu, tap “Groups.” It’s between “Give” and “About Us.”"
+        "Scroll down on Home and tap the “Groups” tile next to “Events.”",
+        "You can also tap “More” at the bottom right and select “Groups” between “Give” and “About Us.”"
       ],
       "images": [
         {
+          "file": "mercy-app-home-groups.png",
+          "alt": "Mercy Church app Home screen with the Groups tile circled beside Events.",
+          "caption": "The circled Groups tile opens Groups directly from Home."
+        },
+        {
           "file": "mercy-app-more.png",
           "alt": "More menu showing Groups between Give and About Us.",
-          "caption": "The More menu contains Groups."
+          "caption": "You can also open Groups from More."
         }
       ]
     },
